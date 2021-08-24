@@ -2,6 +2,7 @@ void setup(){
   size(400,400);
 }
 void draw(){
+  noStroke();
   //spines
   fill(50,100,0);
   triangle(165,200,175,200,170,195);
@@ -14,8 +15,9 @@ void draw(){
   triangle(235,200,245,200,240,195);
   triangle(245,200,255,200,250,195);
   triangle(255,200,265,200,260,195);
+  
+  //triangle(260,195,);
   fill(100,200,0);
-  noStroke();
   //body
   rect(145,200,120,50);
   triangle(265,200,265,250,375,250);
