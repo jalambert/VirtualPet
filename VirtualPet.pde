@@ -55,3 +55,19 @@ void draw(){
   ellipse(160,200,10,10);
 }
 
+//arduino stuff
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+public void setup() {
+  size(500, 500);
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
+}
+
+public void draw() {
+  background(192);
+  int y = arduino.analogRead(5);
+  System.out.println(y);
+  ellipse(2*y, 2*y, 2*y, 2*y);
+}
